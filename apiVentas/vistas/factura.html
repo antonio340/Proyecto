@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Factura - API Ventas</title>
+  <link rel="stylesheet" href="css/factura.css">
+</head>
+<header>
+  <nav>
+    <ul id="navList" style="list-style-type: none; display: flex; gap: 15px; justify-content: center; padding: 10px; background: #007BFF; color: #fff;">
+      <!-- Los links se inyectan mediante JavaScript -->
+    </ul>
+  </nav>
+</header>
+<body>
+  <h1>Tu Factura</h1>
+
+  <div class="container">
+    <button id="btnConsultarFactura">Generar / Actualizar Factura</button>
+    <div id="facturaInfo"></div>
+  </div>
+
+  <p id="message"></p>
+
+<script src="scripts/factura.js"></script>
+<script src="scripts/header.js"></script>
+</body>
+</html>

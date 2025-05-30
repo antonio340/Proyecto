@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedidos - API Ventas</title>
+  <link rel="stylesheet" href="css/pedidos.css">
+</head>
+<header>
+  <nav>
+    <ul id="navList" style="list-style-type: none; display: flex; gap: 15px; justify-content: center; padding: 10px; background: #007BFF; color: #fff;">
+      <!-- Los links se inyectan mediante JavaScript -->
+    </ul>
+  </nav>
+</header>
+<body>
+  <h1>Gestión de Pedidos</h1>
+
+  <!-- Formulario para crear un Pedido -->
+  <div class="container" id="crearPedidoContainer">
+    <h2>Crear Pedido</h2>
+    <form id="crearPedidoForm">
+      <input type="number" id="pedidoIdProducto" placeholder="Ingrese el ID del Producto" required>
+      <button type="submit">Crear Pedido</button>
+    </form>
+  </div>
+
+  <!-- Sección para mostrar el listado de pedidos -->
+  <div class="container" id="listarPedidosContainer">
+    <h2>Listado de Pedidos</h2>
+    <button id="cargarPedidos">Cargar Pedidos</button>
+    <div id="pedidosList"></div>
+  </div>
+
+  <!-- Formulario para eliminar un Pedido -->
+  <div class="container" id="eliminarPedidoContainer">
+    <h2>Eliminar Pedido</h2>
+    <form id="eliminarPedidoForm">
+      <input type="number" id="pedidoIdEliminar" placeholder="Ingrese el ID del Pedido a eliminar" required>
+      <button type="submit" class="delete">Eliminar Pedido</button>
+    </form>
+  </div>
+
+  <p id="message"></p>
+
+  <script src="scripts/pedidos.js"></script>
+  <script src="scripts/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-container {
+      width: 400px;
+      margin: 0 auto 20px auto;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .form-container input,
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      box-sizing: border-box;
+    }
+    .form-container button {
+      cursor: pointer;
+      background: #007BFF;
+      border: none;
+      color: #fff;
+    }
+    .form-container button.delete {
+      background: #C82333;
+    }
+    .message {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 15px;
+    }

@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /apiVentas/api/public/
+
+# Si la solicitud no corresponde a un archivo o directorio existente, redirige a index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]

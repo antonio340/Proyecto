@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /apiVentas/vistas/
+
+# Si la solicitud no corresponde a un archivo o directorio existente, redirige a index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.html [QSA,L]
