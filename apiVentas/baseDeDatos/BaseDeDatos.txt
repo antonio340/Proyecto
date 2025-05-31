@@ -1,0 +1,42 @@
+-- Crear una base de datos llamada "ventas" o como quieras solo le pones el nombre que le pusiste a tu base de datos al archivo database
+
+-- Tabla de Usuario
+CREATE TABLE usuarios (
+    idUsuario INT(11) NOT NULL AUTO_INCREMENT,
+    nombreUsuario VARCHAR(100) NOT NULL,
+    claveUsuario VARCHAR(255) NOT NULL,
+    rolUsuario VARCHAR(50) NOT NULL,
+    PRIMARY KEY (idUsuario)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Tabla de Producto
+CREATE TABLE productos (
+    idProducto INT(11) NOT NULL AUTO_INCREMENT,
+    nombreProducto VARCHAR(100) NOT NULL,
+    precioProducto DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY (idProducto)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Tabla de Pedidos
+CREATE TABLE pedidos (
+    idPedido INT(11) NOT NULL AUTO_INCREMENT,
+    idUsuario INT(11) NOT NULL,
+    idProducto INT(11) NOT NULL,
+    PRIMARY KEY (idPedido),
+    FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario) 
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (idProducto) REFERENCES producto(idProducto)
+        ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Tabla de Factura
+CREATE TABLE facturas (
+    idFactura INT(11) NOT NULL AUTO_INCREMENT,
+    idUsuario INT(11) NOT NULL,
+    ivaFactura DECIMAL(10,2) NOT NULL,
+    totalFactura DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY (idFactura),
+    FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario)
+        ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
