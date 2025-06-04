@@ -1,0 +1,170 @@
+{
+  "facturas": [
+    {
+      "idFactura": 1,
+      "idUsuario": 1,
+      "ivaFactura": 40,
+      "subtotalFactura": 250,
+      "totalFactura": 290,
+      "id": "8bc1"
+    },
+    {
+      "idFactura": 2,
+      "idUsuario": 4,
+      "ivaFactura": 16,
+      "subtotalFactura": 100,
+      "totalFactura": 116,
+      "id": "0348"
+    },
+    {
+      "idFactura": 3,
+      "idUsuario": 2,
+      "ivaFactura": 2904,
+      "subtotalFactura": 18150,
+      "totalFactura": 21054,
+      "id": "ede3"
+    }
+  ],
+  "pedidos": [
+    {
+      "idPedido": 1,
+      "idUsuario": 1,
+      "idProducto": 1,
+      "id": "a53f"
+    },
+    {
+      "idPedido": 2,
+      "idUsuario": 1,
+      "idProducto": 3,
+      "id": "d4fd"
+    },
+    {
+      "idPedido": 5,
+      "idUsuario": 1,
+      "idProducto": 5,
+      "id": "e934"
+    },
+    {
+      "idPedido": 6,
+      "idUsuario": 1,
+      "idProducto": 3,
+      "id": "499a"
+    },
+    {
+      "idPedido": 9,
+      "idUsuario": 4,
+      "idProducto": 3,
+      "id": "5c3e"
+    },
+    {
+      "idPedido": 10,
+      "idUsuario": 4,
+      "idProducto": 5,
+      "id": "4baa"
+    },
+    {
+      "idPedido": 14,
+      "idUsuario": 2,
+      "idProducto": 3,
+      "id": "3a81"
+    },
+    {
+      "idPedido": 15,
+      "idUsuario": 2,
+      "idProducto": 5,
+      "id": "dc88"
+    },
+    {
+      "idPedido": 16,
+      "idUsuario": 2,
+      "idProducto": 5,
+      "id": "883d"
+    },
+    {
+      "idPedido": 17,
+      "idUsuario": 2,
+      "idProducto": 2,
+      "id": "26b7"
+    },
+    {
+      "idPedido": 18,
+      "idUsuario": 2,
+      "idProducto": 2,
+      "id": "d5c8"
+    },
+    {
+      "id": "d8a3",
+      "idProducto": 1
+    },
+    {
+      "id": "7161",
+      "idProducto": 1
+    },
+    {
+      "id": "d0f5",
+      "idProducto": 3
+    }
+  ],
+  "productos": [
+    {
+      "idProducto": 1,
+      "nombreProducto": "Galletas",
+      "precioProducto": 100,
+      "id": "4bf7"
+    },
+    {
+      "idProducto": 2,
+      "nombreProducto": "Switch2",
+      "precioProducto": 9000,
+      "id": "0542"
+    },
+    {
+      "idProducto": 3,
+      "nombreProducto": "Chaos Cola",
+      "precioProducto": 50,
+      "id": "f0aa"
+    },
+    {
+      "idProducto": 4,
+      "nombreProducto": "Chocolate",
+      "precioProducto": 60,
+      "id": "2693"
+    },
+    {
+      "idProducto": 5,
+      "nombreProducto": "Bloxy Cola",
+      "precioProducto": 50,
+      "id": "fc5d"
+    }
+  ],
+  "usuarios": [
+    {
+      "idUsuario": 1,
+      "nombreUsuario": "Antonio",
+      "claveUsuario": "password123",
+      "rolUsuario": "Cliente",
+      "id": "1ca1"
+    },
+    {
+      "idUsuario": 2,
+      "nombreUsuario": "Jefe de jefes",
+      "claveUsuario": "theultimateboss",
+      "rolUsuario": "Admin",
+      "id": "8d36"
+    },
+    {
+      "idUsuario": 3,
+      "nombreUsuario": "Sedaces stock",
+      "claveUsuario": "yellowdevik2",
+      "rolUsuario": "Empleado",
+      "id": "be8e"
+    },
+    {
+      "idUsuario": 4,
+      "nombreUsuario": "unCliente",
+      "claveUsuario": "12345678",
+      "rolUsuario": "Cliente",
+      "id": "dda2"
+    }
+  ]
+}
