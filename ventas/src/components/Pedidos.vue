@@ -26,13 +26,17 @@
             <th>ID Pedido</th>
             <th>ID Usuario</th>
             <th>ID Producto</th>
+            <th>Nombre Producto</th>
+            <th>Precio</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="pedido in pedidos" :key="pedido.idPedido">
+          <tr v-for="pedido in pedidosConProductos" :key="pedido.idPedido">
             <td>{{ pedido.idPedido }}</td>
             <td>{{ pedido.idUsuario }}</td>
             <td>{{ pedido.idProducto }}</td>
+            <td>{{ pedido.nombreProducto || 'N/A' }}</td>
+            <td>${{ pedido.precioProducto || 'N/A' }}</td>
           </tr>
         </tbody>
       </table>
@@ -66,13 +70,34 @@ export default {
   data() {
     return {
       pedidos: [],
+      productos: [], // Añadimos array para productos
       nuevoPedido: { idProducto: '' },
       idPedidoEliminar: '',
       mensaje: '',
       mensajeError: false
     }
   },
+  computed: {
+    pedidosConProductos() {
+      return this.pedidos.map(pedido => {
+        const producto = this.productos.find(p => p.idProducto == pedido.idProducto);
+        return {
+          ...pedido,
+          nombreProducto: producto?.nombreProducto,
+          precioProducto: producto?.precioProducto
+        };
+      });
+    }
+  },
   methods: {
+    async cargarProductos() {
+      try {
+        const response = await fetch('http://localhost:3000/productos');
+        this.productos = await response.json();
+      } catch (error) {
+        console.error('Error al cargar productos:', error);
+      }
+    },
     async cargarPedidos() {
       try {
         const token = localStorage.getItem('token');
@@ -82,6 +107,7 @@ export default {
           }
         });
         this.pedidos = await response.json();
+        await this.cargarProductos(); // Cargar productos después de los pedidos
         this.mostrarMensaje('Pedidos cargados', false);
       } catch (error) {
         this.mostrarMensaje('Error al cargar pedidos', true);
